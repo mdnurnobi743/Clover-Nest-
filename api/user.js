@@ -80,6 +80,7 @@ async function handleInit(req, res, db) {
         wtcBalance: 0,
         usdtBalance: 0,
         lifetimeWtcEarned: 0,
+        lifetimeUsdEarned: 0, // ⚠️ NEW — real USDT ever won from the rare spin-wheel jackpot wedges
         referralCount: 0,
         weeklyReferralCount: 0,
         totalInvites: 0,
@@ -266,4 +267,4 @@ export default async function handler(req, res) {
     }
 
     return res.status(405).json({ ok: false, error: 'method_not_allowed' });
-    }
+}
